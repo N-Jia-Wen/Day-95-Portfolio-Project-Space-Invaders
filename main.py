@@ -32,6 +32,10 @@ screen.onkeypress(fun=player.move_right, key="Right")
 screen.onkeypress(fun=player.move_left, key="Left")
 screen.onkeypress(fun=player.shoot, key="space")
 
+for turtle in screen.turtles():
+    if turtle.color()[0] == "black":
+        turtle.hideturtle()
+        
 
 while game_running is True:
     screen.update()
