@@ -33,6 +33,7 @@ class Player(Turtle):
             self.player_shape_registered = True
 
     def create_player(self, position):
+        self.color(player_colour_hex)
         self.shape("player_cannon_resized")
         self.setheading(RIGHT)
         self.penup()
