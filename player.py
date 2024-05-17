@@ -50,6 +50,7 @@ class Player(Turtle):
         player_projectile = Projectile(player_colour_hex, (current_x, current_y + 38))
         player_projectile.move()
         self.player_projectiles.append(player_projectile)
+        getscreen().onkeypress(self.dummy_function, "space")
 
     def turn_red(self):
         self.shape("player_cannon_damaged_resized")
@@ -59,4 +60,7 @@ class Player(Turtle):
 
     def took_damage(self):
         self.turn_red()
-        getscreen().ontimer(self.turn_green, 750)
+        getscreen().ontimer(self.turn_green, 750
+
+    def dummy_function(self):
+        pass
