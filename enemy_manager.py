@@ -147,6 +147,8 @@ class EnemyManager:
                     player_projectile.hideturtle()
                     player.player_projectiles.remove(player_projectile)
 
+                    getscreen().onkeypress(fun=player.shoot, key="space")
+
                     del enemy
                     del player_projectile
                     break
@@ -156,6 +158,9 @@ class EnemyManager:
 
                     player_projectile.hideturtle()
                     player.player_projectiles.remove(player_projectile)
+
+                    getscreen().onkeypress(fun=player.shoot, key="space")
+                    
                     del player_projectile
                     break
 
